@@ -1,0 +1,13 @@
+apply plugin: 'java'
+apply plugin: 'jetty'
+
+dependencies {
+    testCompile "junit:junit:4.11"
+    compile "javax.servlet:javax.servlet-api:3.0.1"
+}
+
+jettyRun.contextPath = '/';
+jettyRun.httpPort = 8080
+jettyRun.daemon = true
+jettyStop.stopPort = 9451
+jettyStop.stopKey = 'foo'

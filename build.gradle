@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'jetty'
+apply plugin: 'eclipse'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.11'
+    providedCompile "javax.servlet:servlet-api:2.5"
+}
+
+jettyRun.contextPath = '/';
+jettyRun.httpPort = 8080
+jettyRun.daemon = true
+jettyStop.stopPort = 9451
+jettyStop.stopKey = 'foo'
