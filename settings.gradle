@@ -1,1 +1,1 @@
-include 'demoservlet'
+include 'demoservlet', 'messagelib'

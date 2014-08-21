@@ -4,6 +4,7 @@ apply plugin: 'jetty'
 dependencies {
     testCompile "junit:junit:4.11"
     compile "javax.servlet:javax.servlet-api:3.0.1"
+    compile project(':messagelib')
 }
 
 jettyRun.contextPath = '/';
