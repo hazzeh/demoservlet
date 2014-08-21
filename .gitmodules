@@ -1,0 +1,3 @@
+[submodule "messagelib"]
+	path = messagelib
+	url = git@github.com:hazzeh/messagelib.git
