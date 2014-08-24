@@ -6,11 +6,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import se.hazelius.dev.demo.messagelib.MessageLib;
+
 public class DemoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1933123960656851478L;
+	private MessageLib mLib;
 
 	@Override
 	public void init() throws ServletException {
+		mLib = new MessageLib();
 		super.init();
 	}
 
@@ -26,8 +30,8 @@ public class DemoServlet extends HttpServlet {
 			throws ServletException, IOException {
 	
     String token = req.getParameter("token");
-
-    req.setAttribute("message", "Hello " +token);
+    String message = mLib.getMessage();
+    req.setAttribute("message", message+" "+token);
 
     req.getRequestDispatcher("jsp/index.jsp").forward(req, resp);
 
