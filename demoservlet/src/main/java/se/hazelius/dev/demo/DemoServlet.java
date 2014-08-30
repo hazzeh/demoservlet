@@ -35,10 +35,10 @@ public class DemoServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 
-		String token = req.getParameter("token");
-		long l = 0;
-		String message = mLib.getMessage(l);
-		req.setAttribute("message", message+" "+token);
+		String tokenString = req.getParameter("token");
+		long token = Integer.valueOf(tokenString);
+		String message = mLib.getMessage(token);
+		req.setAttribute("message", message);
 
 		req.getRequestDispatcher("jsp/index.jsp").forward(req, resp);
 
