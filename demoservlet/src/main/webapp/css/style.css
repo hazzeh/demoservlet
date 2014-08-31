@@ -4,6 +4,7 @@ body {
 div{
 	font-family: 'Helvetica Neue',Helvetica,sans-serif;
 }
+P { text-align: center }
 .form-container {
    border: 1px solid #d1d7f0;
    background: #a2b2c7;

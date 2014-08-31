@@ -8,7 +8,7 @@
   <div class="form-title">
     <h2>Get Message</h2>
   </div>
-  <input class="form-field" type="text" name="token" pattern="\d+" title="Enter the token number" placeholder="Token" autocomplete="off"/>
+  <input class="form-field" type="text" name="token" pattern="\d+" title="Enter the token number" placeholder="Token" autocomplete="off" required/>
   <br/>
   <div class="submit-container">
     <input class="submit-button" type="submit" value="Get Message" />
@@ -17,5 +17,7 @@
 <div class="form-container">
   <h2>${message}</h2>
 </div>
+<br>
+  <p>${quotedmessage}</p>
 </body>
 </html>

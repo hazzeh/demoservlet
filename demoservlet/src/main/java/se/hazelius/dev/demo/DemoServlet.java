@@ -38,7 +38,9 @@ public class DemoServlet extends HttpServlet {
 		String seedString = req.getParameter("token");
 		long seedValue = Integer.valueOf(seedString);
 		String message = mLib.getMessage(mLib.getToken(seedValue));
+		String quotedmessage = mLib.getMessageQuoted(mLib.getToken(seedValue));
 		req.setAttribute("message", message);
+		req.setAttribute("quotedmessage", quotedmessage);
 
 		req.getRequestDispatcher("jsp/index.jsp").forward(req, resp);
 
